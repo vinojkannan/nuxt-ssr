@@ -1,22 +1,16 @@
 <template>
   <div>
-    <h1 style="text-align: center">VUE SSR - Countries</h1>
-    <v-container>
-      <v-list three-line>
-        <template v-for="(country, index) in countries">
-          <v-divider :key="index"></v-divider>
-          <v-list-item :key="country.name">
-            <v-list-item-content>
-              <v-list-item-title>
-                <NuxtLink :to="{ path: `country/${country.code}` }">
-                  {{ country.name }}
-                </NuxtLink>
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </template>
-      </v-list>
-    </v-container>
+    <h1 style="text-align: center">Nuxt SSR - Countries</h1>
+    <ul>
+      <template v-for="country in countries">
+        <hr :key="country.name" />
+        <li :key="country.name">
+          <NuxtLink :to="{ path: `country/${country.code}` }">
+            {{ country.name }}
+          </NuxtLink>
+        </li>
+      </template>
+    </ul>
   </div>
 </template>
 
@@ -40,3 +34,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+ul {
+  padding: 100px;
+  list-style-type: none;
+}
+li {
+  padding: 20px;
+  text-align: center;
+}
+</style>

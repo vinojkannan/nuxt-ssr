@@ -18,3 +18,13 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+## Docs
+https://nuxtjs.org/faq/heroku-deployment/
+
+
+### Heroku commands
+```
+heroku logs --app vtt-backend
+```
